@@ -1,0 +1,62 @@
+Options -Multiviews
+
+RewriteEngine On
+
+
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^mekogas.com.vn$ [OR]
+RewriteCond %{HTTP_HOST} ^mekogas.vn$ [OR]
+RewriteCond %{HTTP_HOST} ^www.mekogas.vn$ [OR]
+RewriteCond %{HTTP_HOST} ^kiwa.com.vn$ [OR]
+RewriteCond %{HTTP_HOST} ^www.kiwa.com.vn [NC]
+RewriteRule (.*) http://www.mekogas.com.vn/$1 [R=301,L]
+
+
+RewriteCond %{ENV:REDIRECT_STATUS} 200
+RewriteRule .* - [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?lang=$1
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)\.html$ index.php?lang=$1&view=$2
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)/([a-zA-Z0-9_-]+)\.html$ index.php?lang=$1&page=$2&view=$3
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)-i([0-9]+)\.html$ index.php?lang=$1&view=$2&id=$4
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)-cate([0-9]+)\.html$ index.php?lang=$1&view=$2&cate_id=$4
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/pg([0-9]+)/([a-zA-Z0-9_-]+)-cate([0-9]+)\.html$ index.php?lang=$1&view=$2&page=$3&cate_id=$5
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)-p([0-9]+)\.html$ index.php?lang=$1&view=$2&pId=$4
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/pg([0-9]+)/([a-zA-Z0-9_-]+)-p([0-9]+)\.html$ index.php?lang=$1&view=$2&page=$3&pId=$5
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)-p([0-9]+)\.html$ index.php?view=$1&pId=$3
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)/([a-zA-Z0-9_-]+)-p([0-9]+)\.html$ index.php?view=$1&pId=$4&page=$2
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)\.html$ index.php?lang=$1&view=$3&hint=$2
+
+Redirect 301 /vi/bep-gas-am-kieng-ki6.html /vi/san-pham/bep-gas-am-cate5.html
+Redirect 301 /vi/bep-gas-ki11.html /vi/san-pham/bep-gas-cate7.html
+Redirect 301 /vi/bep-gas/bep-gas-sakura-pr21.html /vi/san-pham/bep-gas-sakura-p15.html
+Redirect 301 /vi/may-say-chen-ki8.html /vi/san-pham/may-say-chen-cate1.html
+Redirect 301 /vi/may-hut-khoi-ki7.html /vi/san-pham/may-hut-khoi-cate2.html
+Redirect 301 /vi/bep-gas-am-kieng/bep-am-sakura-pr2.html /vi/san-pham/bep-gas-am-sakura-p18.html
+Redirect 301 /vi/thiet-bi-loc-nuoc-ki34.html /vi/san-pham/thiet-bi-loc-nuoc-cate13.html
+Redirect 301 /vi/thiet-bi-loc-nuoc/may-tao-ozone/may-tao-ozone-khu-doc-kiwa-kw-3000-pd79.html /vi/san-pham/may-tao-ozone-kiwa-kw-3000-i90.html
+Redirect 301 /vi/hang-gia-dung/noi-ap-suat-kiwa-pr30.html /vi/san-pham/noi-ap-suat-kiwa-p22.html
+Redirect 301 /vi/may-nuoc-nong-ki9.html /vi/san-pham/may-nuoc-nong-cate6.html
+Redirect 301 /vi/hang-gia-dung/noi-ap-suat-kiwa/noi-ap-suat-dien-kiwa-6l-kw-600s-pd78.html /vi/san-pham/noi-ap-suat-dien-kiwa-kw-600s-i68.html
+Redirect 301 /vi/bep-gas/bep-gas-kiwa-pr20.html /vi/san-pham/bep-gas-kiwa-p14.html
+Redirect 301 /vi/bep-gas/bep-gas-sakura/bep-gas-don-sakura-sa-300g-pd89.html /vi/san-pham/bep-gas-don-sakura-sa-300g-i32.html
+Redirect 301 /vi/bep-gas-am-kieng/bep-am-sakura/bep-am-dien-tu-sakura-si-281e-pd6.html /vi/san-pham/bep-dien-tu-sakura-si-281e-i98.html
+Redirect 301 /vi/hang-horeca/bep-gas-cong-nghiep-pr36.html /vi/san-pham/bep-gas-cong-nghiep-p21.html
+
+
+
+
+
+
+
+
