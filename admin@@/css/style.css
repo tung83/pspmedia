@@ -1,0 +1,21 @@
+
+/* makes the font 33% larger relative to the icon container */
+.glyphicon {
+  top: 0;
+}
+body{
+  background-image: url("../images/admin_login_background.png");
+}
+.help-block{
+  margin-top: 10px;
+}
+.button:after {
+content: "";
+width: 30px;
+height: 30px;
+background:red url("http://www.gentleface.com/i/free_toolbar_icons_16x16_black.png") no-repeat -30px -50px fixed;
+top: 10px;
+right: 5px;
+position: absolute;
+display: inline-block;
+}
